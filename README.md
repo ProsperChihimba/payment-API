@@ -45,7 +45,7 @@ Here is an example of a POST request to charge a customer.<br>
    
 After making a POST request API will return a JSON data with transaction data
 
-# NOTICE: 
+# NOTICE: <br>
 The returned transaction data does not mean that the transaction was made succesfully, you have to verify that the status of transaction is Success(this identifies that the transaction was completed). Please read down the table of Status and their meaning.
 
 Here is the sample of returned JSON data.<br>
