@@ -80,4 +80,9 @@ Uncomplete - Transaction is not completed yet for customer to pay<br><br>
 
 403 (Forbidden) - You don't have permission to access the requested resource
 
-429 (Too Many Requests) - You have made too many requests. Please look at our late limiting description
+429 (Too Many Requests) - You have made too many requests. Please look at our late limiting description <br><br>
+
+
+# HOW TO INSTALL REQUIREMENTS <br>
+You can use PIP to install the requirements<br>
+Type # pip install -r requirements.txt in your command line
