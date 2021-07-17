@@ -1,4 +1,4 @@
-# payment-project
+# payment-project using beem SMS
 This is an all-in-one payment API that help’s businesses, developers seeking to accept digital payments from customers willing to pay via card, mobile-money-operators. This help’s merchants save time from having to multi-register and undergo legal processes for every mobile money operator. It's Stripe for East Africa.
 
 This API uses Beem SMS API to send text messages to customers who have made a transaction through the API. It sends a successfully transaction message or declined transaction message.
@@ -7,15 +7,15 @@ In the future the API will imprement service to make payment in the web by using
 
 Here is the documentation of the API<br><br>
 
-OVERVIEW <br>
+# OVERVIEW <br>
 Charge your customer direct from your sever side by making a request to Payment API with required paramenters.<br><br>
 
 
-AUTHENTICATION<br>
+# AUTHENTICATION<br>
 Authenticate your API calls by including your secret key in the Authorization header of every request you make.<br><br>
 
 
-PASS CUSTOMER INFORMATIONS<br>
+# PASS CUSTOMER INFORMATIONS<br>
 To make a transaction you will need to pass customer information such as (phone_number, amount, provider_name, Email, amount, first_name, last_name and etc). Customer names are optional. The request must be made with private key. Here are full list of paramenters and their meaning.<br>
 
 Amount - This is an amount in Tanzania shiling(Required).<br>
@@ -26,7 +26,7 @@ First name - This is a first name of customer(Optional).<br>
 Last name - This is a last name of customer(Optional).<br><br>
 
 
-MAKE A REQUEST<br>
+# MAKE A REQUEST<br>
 Here is an example of a POST request to charge a customer.<br>
 
 <span style="color:rgb(250, 120, 45)">curl</span> --location --request <span style="color:rgb(194, 247, 237)">POST</span> <span style="color:rgb(173, 219, 103)">'http://127.0.0.1:5000/transaction/charge/'</span> \ <br>
@@ -44,7 +44,7 @@ Here is an example of a POST request to charge a customer.<br>
    
 After making a POST request API will return a JSON data with transaction data
 
-NOTICE: The returned transaction data does not mean that the transaction was made succesfully, you have to verify that the status of transaction is Success(this identifies that the transaction was completed). Please read down the table of Status and their meaning.
+# NOTICE: The returned transaction data does not mean that the transaction was made succesfully, you have to verify that the status of transaction is Success(this identifies that the transaction was completed). Please read down the table of Status and their meaning.
 
 Here is the sample of returned JSON data.<br>
 {<br>
@@ -55,13 +55,13 @@ Here is the sample of returned JSON data.<br>
 }<br><br>
 
 
-RETURNED STATUS
+# RETURNED STATUS
 Success - Transaction is completed succesfully
 Pending - Transaction is in progress and is not completed yet
 Uncomplete - Transaction is not completed yet for customer to pay<br><br>
 
 
-HTTP STATUS<br>
+# HTTP STATUS<br>
 200, 201 (Success) - Request was successful and intended action was carried out. Note that we will always send a 200 if a charge or verify request was made. Do check the data object to know how the charge went (i.e. successful or failed).
 
 401 (Not Authorized) - The request sent was not authorized due not invalid Secret Key or more.
