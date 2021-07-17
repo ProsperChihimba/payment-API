@@ -70,13 +70,13 @@ def create_transaction():
                 transaction_status = "Success"
                 transaction_message = "Transaction was completed successfully"
 
-                #send SMS to the customer when the payment was succesfully
+                #send SMS to the customer using Beem API when the payment was succesfully
                 send_txt = send_sms(data['number_used'], f'You have successfully made {data["amount"]} transaction to Payment API.')
             else:
                 transaction_status = "Pedding"
                 transaction_message = "Transaction is in progress"
 
-                #send SMS to the customer when the payment was not succesfully
+                #send SMS to the customer using Beem API when the payment was not succesfully
                 send_txt = send_sms(data['number_used'], f'Your {data["amount"]} transaction had an error please try again.')
 
 
