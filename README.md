@@ -1,4 +1,4 @@
-# payment-project using beem SMS
+# payment API using beem SMS
 This is an all-in-one payment API that help’s businesses, developers seeking to accept digital payments from customers willing to pay via card, mobile-money-operators. This help’s merchants save time from having to multi-register and undergo legal processes for every mobile money operator. It's Stripe for East Africa.
 
 This API uses Beem SMS API to send text messages to customers who have made a transaction through the API. It sends a successfully transaction message or declined transaction message.
